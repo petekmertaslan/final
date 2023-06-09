@@ -1,7 +1,6 @@
 ---
-title: "Title"
-author: 
-  - Last Name, First Name[^1]
+title: "Labour Force by sex,age and education (thousand)-Annual"
+author: "Mertaslan, Petek[^1]"
 bibliography: ../bibliography/biblio.bib
 csl: ../csl/apa.csl
 header-includes:
@@ -24,8 +23,7 @@ link-citations: yes
 urlcolor: blue
 fontsize: 12pt
 biblio-style: apalike
-abstract: |
-    Write your abstract here.
+abstract: The subject of this study is to investigate the workforce in terms of gender, age and education with data collected from many countries. The ILOSTAT database was used in the evaluation. The subject was evaluated over 59 countries and 12 regions. Also, 2 genders, male and female, were evaluated. In addition, the age range was discussed over five different aggregate bands. Moreover, educational status was classified based on ISCED-11 and ISCED-97 data. Finally, the year range was set to 2005 and 2015. Gender and education were determined as variable, and Sweden and Afghanistan, which have importance in the two determined regions, were taken as samples. The correlation method was also used as an analysis technique. The study has shown that labor force assessments reveal important results such as a significant relationship between gender and education in terms of labor force participation rate. It has also been observed that higher education levels generally contribute to higher employment rates. Labor force differences between men and women have emerged. In some regions, it has been observed that the education level of women is very low and the workforce is also low. In some regions, it has been observed that a high labor force rate is provided with higher education. Moreover, it has been understood that the workforce is mostly composed of young people. The importance of the study can be increased by socio-economic and socio-political evaluations and it can positively affect the current and future policies of the countries.
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
@@ -34,7 +32,7 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== FOOTNOTES ============================== -->
 <!-- ======================================================================= -->
-[^1]: Student ID, [Github Repo](https://github.com/YOUR_USER_NAME_HERE/YOUR_REPO_NAME_HERE)
+[^1]: 19080780, [Github Repo](https://github.com/petekmertaslan/final.git)
 
 # Important Information About Midterm
 
@@ -47,25 +45,26 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 \colorbox{WildStrawberry}{Read the README.md file in the project folder for more information.}
 
 # Introduction
-This outline has been created to assist you in writing your project assignment. You should cite all the sources you use, articles, presentations, projects, etc. Quoting and referencing gives readers the opportunity to access the resources you refer. **Even though you use your own words, if you are conveying the ideas of others in your work, you have to document the source of these ideas. Otherwise, you are committing academic plagiarism.** For example, you can refer to @aydinonat:2007 for academic writing rules. You can find lots of online resources on this topic.
+In this section, the evaluations of the workforce in terms of gender, age and education are discussed. The ILOSTAT database was used in the evaluation. The subject was evaluated over 59 countries and 12 regions. Also, 2 genders, male and female, were evaluated. In addition, the age range was discussed over five different aggregate bands. Moreover, educational status was classified based on ISCED-11 and ISCED-97 data. Finally, the year range was set to 2005 and 2015. The results obtained from the studies on the subject and the articles written with observations were also examined. Also, it was observed in the articles that were in the same context with the subject. The purpose of the study was to find relations between variables which creates the data that have information from more than 50 country.There were 12 variables in the main data. Sex, age and education were the decisive ones. Data that is used to aim goals of the study analyzed by using correlation analysis method.
 
-The sections in your project assignment should definitely include the sections in this text. Apart from the sections used here, you can use different subsections. When writing your project, use this file as a draft and adapt its content to your purposes.
 
-In this section, mention the purpose and importance of your work in a few paragraphs.
+The importance of the study can be explained by three point of view. Firstly, this study shows use women around the world have less employment rate than men. Secondly, education level has importance in different type of countries.Even if these countries have different stereotypes in labor market they have one thing in common which  education level, better education gives more employment level. Thirdly, working ages are different in countries but it shows that young population is the aim and people over 65 are the main topic of labor force. Also there is an important issue in some Asian countries which is child labor.It has been observed that the working rate of children in the 15-17 age group is high.In conclusion, labor force variables and statistics gives us noticeable information around countries and it would be useful to use in economic, politic and social policies.  
 
 ## Literature Review
 
-In this section, discuss the articles you have read on the subject by giving references. This is a narrative citation @chang:2013. This one is a parenthetical citation [@chang:2013]. **Do not summarize each article individually under a separate title.** In the literature review section, **at least six** articles must be cited [@newbold:2003; @verzani:2014; @wickham:2014; @wooldridge:2015a].
+Many different values and observations are considered in determining the worldwide labor force. The obtained data are categorized as different indicators and tables and maps are prepared over the variables. The data in the ILOSTAT database, which is open to observation, allows us to consider the workforce from different perspectives. Many data sets have been created in terms of labor force over the data obtained from almost all countries. Labor force by sex, age and education is one of the sets created. The data created with the sources obtained on this subject is the main content of this observation.Estimates of past and present labor force participation rates by age, sex, and highest level of educational attainment are based on the European Labor Force Survey (EU LFS) collected by the national statistical institutes and provided by Eurostat [@Loichinger:2015]. There are also data which are formed with Household Living Conditions Survey (HIES).The labor force is equivalent to the economically active population of a country and is composed of everyone who is either employed or unemployed. Employment (civilian and non-civilian, including conscripts) is defined as any work for pay or profit for at least one hour during the reference week of the labor force survey [@Loichinger:2015]. Although gender and age elements are the main elements in tabulating the workforce, education is included in research as one of the determining elements in this regard. Employment rates rise with educational attainment in most OECD countries. With few exceptions, the employment rate for graduates of tertiary education is markedly higher than the rate for upper secondary graduates. For males, the gap is particularly wide between upper secondary graduates and those without an upper secondary qualification. Compared to people who have not completed upper secondary education, people who have completed upper secondary education are much more likely to be in work, but the employment advantage of upper secondary attainment varies across countries. Differences in employment rates between males and females are also wider among less educated groups.The chance of being in employment is 23 percentage points higher for males than for females among those without upper secondary qualifications, falling to 10 points for the most highly qualified. [@Education at a Glance:2007]. Unemployment rates decline with higher education level. The job prospects of people with different levels of education have been found to be highly dependent on the needs of the labor market and the table of workers with different. It has been observed that people with low educational qualifications are both less likely to join the workforce and more likely to be unemployed, even if they are actively looking for work. They feel economically at risk. In addition, while men's education levels have a consistent effect on their labor force participation, the same result has not emerged for women. While the reason for this may be discrimination or discouraged female employees, it may also be the work environment or the level of the job.More educated people typically have lower unemployment because on a regular basis, unemployment rates fall with increasing qualification levels. At an individual level, increased education increases the productivity of workers, leading to better employment and an individual's lifetime earnings. Against the negative differences in women's earnings, empirical research [@Psacharopoulos: 1994] has found that women's return to education is higher than men, which has a greater positive effect for women than men with each additional year of education. [@Ionescu Alina: 2012]
+To conclude, labor force by sex,age and education has its own results around the world but in general there are " gender roles" and male/female differences has outcomes. Also, age is determinant for surveys and labor market. In addition, education is also about employment and unemployment rates because it has an impact on decisions about labor forces. Labor force determinants are international but differce from country to country. 
+
 
 # Data
-In this section, discuss the source of the data set you use in your study, if you have done any operation on the raw data, these operations and the summary statistics about the data set. In this section, it is mandatory to have a table (Table \ref{tab:summary}) containing summary statistics (mean, standard deviation, minimum, maximum, etc. values) of all variables. Make the necessary references to your tables as shown in the previous sentence [@perkins:1991].
+The data set to be used in the study has been created to be used to evaluate the workforce over sex, age and gender. The source from which the data will be obtained has been determined as the International Labor Organization (ILO). Reliable and high quality data was obtained through ILOSTAT, the data site of the organization. Statistics are compiled from labor force surveys, establishment surveys and administrative records. Observing the workforce over many variables has created a large data set. The variables are divided into three groups: gender, age and education. Gender data were collected and evaluated on two genders. Age data were adapted as aggregate bands. Education data has been evaluated over the ISCED code. Since the data layout was obtained in accordance with the project, no changes were made. The relationship between the variables in the data set was observed. Age and gender were the main variables, and the unemployment rate between men and women was found to be higher among less educated groups. In addition, it has been observed that the working rate of people who have completed their upper secondary education is higher. It is aimed to use correlation analysis for the analysis of the data set, and also the use of tables will be made. The findings show that the labor force participation rate is different between men and women. The data obtained on different age groups illuminated issues such as youth unemployment and aging workforce. It has been observed that the level of education has an effect on labor force extraction and it has been observed that low level of education creates a disadvantage. As a result, this data set can be examined economically and politically, and moreover policies can be created. In addition, studies on labor market and economic growth can be done.
 
-R codes for the analysis should start in this section. In this section, you should include the codes that imports the data set into R and the codes that generate summary statistics.
+
 
 ```{r}
 library(tidyverse)
 library(here)
-survey <- read_csv(here("data/survey.csv"))
+DATA <- read_csv(here("C:/Users/HP/Desktop/PEC206/final/data/DATA.csv"))
 ```
 
 Note that code options are edited in some of the code chunks in the Rmd file.
@@ -73,14 +72,16 @@ Note that code options are edited in some of the code chunks in the Rmd file.
 ```{r, echo=FALSE}
 library(xtable) 
 library(summarytools)
+library(magrittr)
+library(dplyr)
 st_options(lang = "en")
 ```
 
 With the `echo=FALSE` option, prevent the codes from appearing in the derived pdf file and report your results in tables.
 
 ```{r results='asis', echo=FALSE}
-survey %>%
-  select("sex", "credits", "handedness", "height", "handspan") %>% 
+DATA %>%
+  select("ref_area.label","indicator.label","source.label","sex.label","classif1.label", "classif2.label", "time", "obs_value", "obs_status.label","note_classif.label","note_indicator.label", "note_source.label") %>% 
   descr(stats = c("mean", "sd", "min", "med", "max"), transpose = TRUE) %>% 
   xtable(caption = "Summary Statistics",
          label = "tab:summary",
@@ -90,29 +91,55 @@ survey %>%
 
 
 # Methods and Data Analysis
-In this section describe the methods that you use to achieve the purpose of the study. You should use the appropriate analysis methods (such as hypothesis tests and correlation analysis) that we covered in the class. If you want, you can also use other methods that we haven't covered. If you think some method is more suitable for the purpose of the analysis and the data set, you can use that method [@newbold:2003; @verzani:2014; @wickham:2014; @wooldridge:2015a].
+Sex and age data, which are defined as the determinants of the labor force in many countries, were chosen as two variables. The relationship between these two variables will be evaluated through labor force participation. Northern Europe and South Asia regions with different conditions and implications were selected as samples for the analysis of the two selected variables.Moreover, two significant country from these areas will be the key point. It was determined that the analysis should be done with the correlation method.
 
-For example, if you are performing regression analysis, discuss your predicted equation in this section. Write your equations and mathematical expressions using $LaTeX$.
+```{r}
+library(ggplot2)
+library(ggpubr)
+library(dplyr)
 
-$$
-Y_t = \beta_0 + \beta_N N_t + \beta_P P_t + \beta_I I_t + \varepsilon_t
-$$
+DATA %>% filter(ref_area.label == 'Sweden')
+  ggscatter ( DATA,
+             x= 'sex.label',
+             y= 'classif2.label',
+             add = 'reg.line',
+             add.params = list(color = 'blue'),
+             conf.int = FALSE,
+             cor.coef = TRUE,
+             cor.coef.coord = c(25, 5),
+             cor.method = 'pearson',
+             ggtheme = theme_minimal())
+             
 
-This section should also include different tables and plots. You can add histograms, scatter plots (such as Figure \@ref(fig:plot)), box plots, etc. Make the necessary references to your figures as shown in the previous sentence.
-
-
-```{r plot, fig.align='center', fig.cap='An Awesome Plot'}
-survey %>% 
-  ggplot(aes(x = handedness, y = handspan)) +
-  geom_point() +
-  geom_smooth() +
-  scale_x_continuous("Handedness") + 
-  scale_y_continuous("Handspan")
 ```
+
+When we look at men's data we see that total value is 2736.883(2015).Also, who Bachelor's or equivalent degree and in labor force is 291.915(2015). When we check woman's value it is nearly equal to men which is 2488.266(2015) in total.Bachelor's or equivalent level values are 505.522(2015). This means that overall woman who are participated in higher education has higher labor force participation rate than man.
+
+
+```{r}
+library(ggplot2)
+library(ggpubr)
+library(dplyr)
+
+DATA %>% filter(ref_area.label == 'Afghanistan')
+
+  ggscatter ( DATA,
+             x= 'sex.label',
+             y= 'classif2.label',
+             add = 'reg.line',
+             add.params = list(color = 'blue'),
+             conf.int = FALSE,
+             cor.coef = TRUE,
+             cor.coef.coord = c(25, 5),
+             cor.method = 'pearson',
+             ggtheme = theme_minimal())
+
+```
+If we check Afghanistan data men's value is 5731.240(2014) in total. At Bachelor's or equivalent level labor force value is 146.852(2014) among men. When we look at woman's data their labor force value is 1873.690(2014) in total.At Bachelor's or equivalent level labor force value is  19.787(2014). These values means that women in labor is much less than men in this country. 
 
 
 # Conclusion
-Summarize the results of your analysis in this section. Discuss to what extent your results responded to the research question you identified at the beginning and how this work could be improved in the future.
+In this part, analyzes were made on two variables selected from the data obtained. The two selected variables were determined as sex and education. As in previous studies, it has been observed that female labor force participation rates are lower than males in this study. It has been observed that this rate is lower especially in underdeveloped or developing Asian and South American countries. It has also been determined that the growth rates of these countries are low. Most importantly, it has been observed that as the education level of women increases, their participation rate in the workforce also increases. It has been understood that the employment rate of women with higher education is high. First of all, when we look at the Sweden situation, it has the second highest female labor force participation rate, ie 70%. Moreover, the rate of women with higher education is 11 percent more than men. It is known that Sweden is one of the leading countries in terms of national income and development index. On the other hand, when we look at the example of Afghanistan, the labor force participation rate of women was 22 percent, according to the data obtained in 2020. As it is known, women were prohibited from receiving education in 2022. According to the latest data obtained before, it was seen that the primary education level was approximately 22%. Due to the ongoing political formation, female labor force participation and education rate are expected to decrease. Moreover, Afghanistan ranks 96th in GDP and is among the least developed countries. In conclusion, analyzes have also shown that gender and education variables affect the socio-economic and socio-political structures of countries as well as the labor force.
 
 **References section is created automatically by Rmarkdown. There is no need to change the references section in the draft file.**
 
@@ -120,5 +147,14 @@ Summarize the results of your analysis in this section. Discuss to what extent y
 
 \newpage
 # References {#references}
+Loichinger, E. (2015). Labor force projections up to 2053 for 26 EU countries, by age, sex, and highest level of educational attainment. Demographic Research, 32, 443–486. 
+Education at a glance 2007. (2007). Education at a Glance. 
+Statistics explained. Statistics Explained. (n.d.-b).Participation of young people in education and the labour market 
+Educational attainment of the labour force’ - search.oecd.org. (n.d.-a).
+Hipple, S. (2016). Labor force participation: What has happened since the peak? Monthly Labor Review. 
+Lauder, H., &amp; Mayhew, K. (2020). Higher education and the Labour Market: An Introduction. Oxford Review of Education, 46(1), 1–9.
+How does education affect labour market outcomes? - researchgate. (n.d.-b). 
+Ionescu, Alina. (2012). How does education affect labour market outcomes?. Review of Applied Socio-Economic Research. 4. 130-144. 
+Psacharopoulos, G.(1994). Returns to investment in education : A further update. World Bank. 
 <div id="refs"></div>
 

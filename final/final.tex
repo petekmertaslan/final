@@ -1,0 +1,344 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Labour Force by sex,age and education (thousand)-Annual},
+  pdfauthor={Mertaslan, Petek},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Labour Force by sex,age and education (thousand)-Annual}
+\author{Mertaslan, Petek\footnote{19080780, \href{https://github.com/petekmertaslan/final.git}{Github Repo}}}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The subject of this study is to investigate the workforce in terms of gender, age and education with data collected from many countries. The ILOSTAT database was used in the evaluation. The subject was evaluated over 59 countries and 12 regions. Also, 2 genders, male and female, were evaluated. In addition, the age range was discussed over five different aggregate bands. Moreover, educational status was classified based on ISCED-11 and ISCED-97 data. Finally, the year range was set to 2005 and 2015. Gender and education were determined as variable, and Sweden and Afghanistan, which have importance in the two determined regions, were taken as samples. The correlation method was also used as an analysis technique. The study has shown that labor force assessments reveal important results such as a significant relationship between gender and education in terms of labor force participation rate. It has also been observed that higher education levels generally contribute to higher employment rates. Labor force differences between men and women have emerged. In some regions, it has been observed that the education level of women is very low and the workforce is also low. In some regions, it has been observed that a high labor force rate is provided with higher education. Moreover, it has been understood that the workforce is mostly composed of young people. The importance of the study can be increased by socio-economic and socio-political evaluations and it can positively affect the current and future policies of the countries.
+\end{abstract}
+
+\hypertarget{important-information-about-midterm}{%
+\section{Important Information About Midterm}\label{important-information-about-midterm}}
+
+\colorbox{BurntOrange}{WRITE YOUR GITHUB REPO LINK ON LINE 37 IN THIS FILE!}
+
+\textbf{Project Proposal submisson will be done by uploading a zip file to the ekampus system along with the Github repo link. If you do not upload a zip file to the system and do not provide a Github repo link, you will be deemed not to have entered the midterm and final exams.}
+
+\textbf{You must upload your project folder (\texttt{YourStudentID.zip} file) to \emph{ekampus.ankara.edu.tr} until 9 June 2023, 23:59.}
+
+\colorbox{WildStrawberry}{Read the README.md file in the project folder for more information.}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+In this section, the evaluations of the workforce in terms of gender, age and education are discussed. The ILOSTAT database was used in the evaluation. The subject was evaluated over 59 countries and 12 regions. Also, 2 genders, male and female, were evaluated. In addition, the age range was discussed over five different aggregate bands. Moreover, educational status was classified based on ISCED-11 and ISCED-97 data. Finally, the year range was set to 2005 and 2015. The results obtained from the studies on the subject and the articles written with observations were also examined. Also, it was observed in the articles that were in the same context with the subject. The purpose of the study was to find relations between variables which creates the data that have information from more than 50 country.There were 12 variables in the main data. Sex, age and education were the decisive ones. Data that is used to aim goals of the study analyzed by using correlation analysis method.
+
+The importance of the study can be explained by three point of view. Firstly, this study shows use women around the world have less employment rate than men. Secondly, education level has importance in different type of countries.Even if these countries have different stereotypes in labor market they have one thing in common which education level, better education gives more employment level. Thirdly, working ages are different in countries but it shows that young population is the aim and people over 65 are the main topic of labor force. Also there is an important issue in some Asian countries which is child labor.It has been observed that the working rate of children in the 15-17 age group is high.In conclusion, labor force variables and statistics gives us noticeable information around countries and it would be useful to use in economic, politic and social policies.
+
+\hypertarget{literature-review}{%
+\subsection{Literature Review}\label{literature-review}}
+
+Many different values and observations are considered in determining the worldwide labor force. The obtained data are categorized as different indicators and tables and maps are prepared over the variables. The data in the ILOSTAT database, which is open to observation, allows us to consider the workforce from different perspectives. Many data sets have been created in terms of labor force over the data obtained from almost all countries. Labor force by sex, age and education is one of the sets created. The data created with the sources obtained on this subject is the main content of this observation.Estimates of past and present labor force participation rates by age, sex, and highest level of educational attainment are based on the European Labor Force Survey (EU LFS) collected by the national statistical institutes and provided by Eurostat (\protect\hyperlink{ref-Loichinger:2015}{\textbf{Loichinger:2015?}}). There are also data which are formed with Household Living Conditions Survey (HIES).The labor force is equivalent to the economically active population of a country and is composed of everyone who is either employed or unemployed. Employment (civilian and non-civilian, including conscripts) is defined as any work for pay or profit for at least one hour during the reference week of the labor force survey (\protect\hyperlink{ref-Loichinger:2015}{\textbf{Loichinger:2015?}}). Although gender and age elements are the main elements in tabulating the workforce, education is included in research as one of the determining elements in this regard. Employment rates rise with educational attainment in most OECD countries. With few exceptions, the employment rate for graduates of tertiary education is markedly higher than the rate for upper secondary graduates. For males, the gap is particularly wide between upper secondary graduates and those without an upper secondary qualification. Compared to people who have not completed upper secondary education, people who have completed upper secondary education are much more likely to be in work, but the employment advantage of upper secondary attainment varies across countries. Differences in employment rates between males and females are also wider among less educated groups.The chance of being in employment is 23 percentage points higher for males than for females among those without upper secondary qualifications, falling to 10 points for the most highly qualified. (\protect\hyperlink{ref-Education}{\textbf{Education?}} at a Glance:2007). Unemployment rates decline with higher education level. The job prospects of people with different levels of education have been found to be highly dependent on the needs of the labor market and the table of workers with different. It has been observed that people with low educational qualifications are both less likely to join the workforce and more likely to be unemployed, even if they are actively looking for work. They feel economically at risk. In addition, while men's education levels have a consistent effect on their labor force participation, the same result has not emerged for women. While the reason for this may be discrimination or discouraged female employees, it may also be the work environment or the level of the job.More educated people typically have lower unemployment because on a regular basis, unemployment rates fall with increasing qualification levels. At an individual level, increased education increases the productivity of workers, leading to better employment and an individual's lifetime earnings. Against the negative differences in women's earnings, empirical research (\protect\hyperlink{ref-Psacharopoulos}{\textbf{Psacharopoulos?}} 1994) has found that women's return to education is higher than men, which has a greater positive effect for women than men with each additional year of education. (\protect\hyperlink{ref-Ionescu}{\textbf{Ionescu?}} Alina: 2012)
+To conclude, labor force by sex,age and education has its own results around the world but in general there are '' gender roles'' and male/female differences has outcomes. Also, age is determinant for surveys and labor market. In addition, education is also about employment and unemployment rates because it has an impact on decisions about labor forces. Labor force determinants are international but differce from country to country.
+
+\hypertarget{data}{%
+\section{Data}\label{data}}
+
+The data set to be used in the study has been created to be used to evaluate the workforce over sex, age and gender. The source from which the data will be obtained has been determined as the International Labor Organization (ILO). Reliable and high quality data was obtained through ILOSTAT, the data site of the organization. Statistics are compiled from labor force surveys, establishment surveys and administrative records. Observing the workforce over many variables has created a large data set. The variables are divided into three groups: gender, age and education. Gender data were collected and evaluated on two genders. Age data were adapted as aggregate bands. Education data has been evaluated over the ISCED code. Since the data layout was obtained in accordance with the project, no changes were made. The relationship between the variables in the data set was observed. Age and gender were the main variables, and the unemployment rate between men and women was found to be higher among less educated groups. In addition, it has been observed that the working rate of people who have completed their upper secondary education is higher. It is aimed to use correlation analysis for the analysis of the data set, and also the use of tables will be made. The findings show that the labor force participation rate is different between men and women. The data obtained on different age groups illuminated issues such as youth unemployment and aging workforce. It has been observed that the level of education has an effect on labor force extraction and it has been observed that low level of education creates a disadvantage. As a result, this data set can be examined economically and politically, and moreover policies can be created. In addition, studies on labor market and economic growth can be done.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(here)}
+\NormalTok{DATA }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{here}\NormalTok{(}\StringTok{"C:/Users/HP/Desktop/PEC206/final/data/DATA.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Note that code options are edited in some of the code chunks in the Rmd file.
+
+With the \texttt{echo=FALSE} option, prevent the codes from appearing in the derived pdf file and report your results in tables.
+
+\begin{table}[ht]
+\centering
+\caption{Summary Statistics} 
+\label{tab:summary}
+\begin{tabular}{lccccc}
+  \toprule
+ & Mean & Std.Dev & Min & Median & Max \\ 
+  \midrule
+obs\_value & 732.99 & 2901.84 & 0.00 & 60.16 & 76270.20 \\ 
+  time & 2011.13 & 3.00 & 2005.00 & 2012.00 & 2015.00 \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+
+\hypertarget{methods-and-data-analysis}{%
+\section{Methods and Data Analysis}\label{methods-and-data-analysis}}
+
+Sex and age data, which are defined as the determinants of the labor force in many countries, were chosen as two variables. The relationship between these two variables will be evaluated through labor force participation. Northern Europe and South Asia regions with different conditions and implications were selected as samples for the analysis of the two selected variables.Moreover, two significant country from these areas will be the key point. It was determined that the analysis should be done with the correlation method.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggpubr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+
+\NormalTok{DATA }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(ref\_area.label }\SpecialCharTok{==} \StringTok{\textquotesingle{}Sweden\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 801 x 12
+##    ref_area.label indicator.label          source.label sex.label classif1.label
+##    <chr>          <chr>                    <chr>        <chr>     <chr>         
+##  1 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  2 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  3 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  4 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  5 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  6 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  7 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  8 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+##  9 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+## 10 Sweden         Labour force by sex, ag~ LFS - EU La~ Sex: Male Age (Aggregat~
+## # i 791 more rows
+## # i 7 more variables: classif2.label <chr>, time <dbl>, obs_value <dbl>,
+## #   obs_status.label <chr>, note_classif.label <chr>,
+## #   note_indicator.label <chr>, note_source.label <chr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{ggscatter}\NormalTok{ ( DATA,}
+             \AttributeTok{x=} \StringTok{\textquotesingle{}sex.label\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{y=} \StringTok{\textquotesingle{}classif2.label\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{add =} \StringTok{\textquotesingle{}reg.line\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{add.params =} \FunctionTok{list}\NormalTok{(}\AttributeTok{color =} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{),}
+             \AttributeTok{conf.int =} \ConstantTok{FALSE}\NormalTok{,}
+             \AttributeTok{cor.coef =} \ConstantTok{TRUE}\NormalTok{,}
+             \AttributeTok{cor.coef.coord =} \FunctionTok{c}\NormalTok{(}\DecValTok{25}\NormalTok{, }\DecValTok{5}\NormalTok{),}
+             \AttributeTok{cor.method =} \StringTok{\textquotesingle{}pearson\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{ggtheme =} \FunctionTok{theme\_minimal}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{final_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+When we look at men's data we see that total value is 2736.883(2015).Also, who Bachelor's or equivalent degree and in labor force is 291.915(2015). When we check woman's value it is nearly equal to men which is 2488.266(2015) in total.Bachelor's or equivalent level values are 505.522(2015). This means that overall woman who are participated in higher education has higher labor force participation rate than man.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggpubr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+
+\NormalTok{DATA }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(ref\_area.label }\SpecialCharTok{==} \StringTok{\textquotesingle{}Afghanistan\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 90 x 12
+##    ref_area.label indicator.label          source.label sex.label classif1.label
+##    <chr>          <chr>                    <chr>        <chr>     <chr>         
+##  1 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  2 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  3 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  4 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  5 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  6 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  7 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  8 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+##  9 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+## 10 Afghanistan    Labour force by sex, ag~ HIES - Hous~ Sex: Male Age (Aggregat~
+## # i 80 more rows
+## # i 7 more variables: classif2.label <chr>, time <dbl>, obs_value <dbl>,
+## #   obs_status.label <chr>, note_classif.label <chr>,
+## #   note_indicator.label <chr>, note_source.label <chr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{ggscatter}\NormalTok{ ( DATA,}
+             \AttributeTok{x=} \StringTok{\textquotesingle{}sex.label\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{y=} \StringTok{\textquotesingle{}classif2.label\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{add =} \StringTok{\textquotesingle{}reg.line\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{add.params =} \FunctionTok{list}\NormalTok{(}\AttributeTok{color =} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{),}
+             \AttributeTok{conf.int =} \ConstantTok{FALSE}\NormalTok{,}
+             \AttributeTok{cor.coef =} \ConstantTok{TRUE}\NormalTok{,}
+             \AttributeTok{cor.coef.coord =} \FunctionTok{c}\NormalTok{(}\DecValTok{25}\NormalTok{, }\DecValTok{5}\NormalTok{),}
+             \AttributeTok{cor.method =} \StringTok{\textquotesingle{}pearson\textquotesingle{}}\NormalTok{,}
+             \AttributeTok{ggtheme =} \FunctionTok{theme\_minimal}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{final_files/figure-latex/unnamed-chunk-5-1.pdf}
+If we check Afghanistan data men's value is 5731.240(2014) in total. At Bachelor's or equivalent level labor force value is 146.852(2014) among men. When we look at woman's data their labor force value is 1873.690(2014) in total.At Bachelor's or equivalent level labor force value is 19.787(2014). These values means that women in labor is much less than men in this country.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+In this part, analyzes were made on two variables selected from the data obtained. The two selected variables were determined as sex and education. As in previous studies, it has been observed that female labor force participation rates are lower than males in this study. It has been observed that this rate is lower especially in underdeveloped or developing Asian and South American countries. It has also been determined that the growth rates of these countries are low. Most importantly, it has been observed that as the education level of women increases, their participation rate in the workforce also increases. It has been understood that the employment rate of women with higher education is high. First of all, when we look at the Sweden situation, it has the second highest female labor force participation rate, ie 70\%. Moreover, the rate of women with higher education is 11 percent more than men. It is known that Sweden is one of the leading countries in terms of national income and development index. On the other hand, when we look at the example of Afghanistan, the labor force participation rate of women was 22 percent, according to the data obtained in 2020. As it is known, women were prohibited from receiving education in 2022. According to the latest data obtained before, it was seen that the primary education level was approximately 22\%. Due to the ongoing political formation, female labor force participation and education rate are expected to decrease. Moreover, Afghanistan ranks 96th in GDP and is among the least developed countries. In conclusion, analyzes have also shown that gender and education variables affect the socio-economic and socio-political structures of countries as well as the labor force.
+
+\textbf{References section is created automatically by Rmarkdown. There is no need to change the references section in the draft file.}
+
+\textbf{\emph{You shouldn't delete the last 3 lines. Those lines are required for References section.}}
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+Loichinger, E. (2015). Labor force projections up to 2053 for 26 EU countries, by age, sex, and highest level of educational attainment. Demographic Research, 32, 443--486.
+Education at a glance 2007. (2007). Education at a Glance.
+Statistics explained. Statistics Explained. (n.d.-b). \url{https://www.ec.europa.eu/eurostat/statistics-explained/index.php/Participation_of_young_people_in_education_and_the_labour_market}
+Educational attainment of the labour force' - search.oecd.org. (n.d.-a). \url{https://search.oecd.org/els/emp/3888221.pdf}
+Hipple, S. (2016). Labor force participation: What has happened since the peak? Monthly Labor Review.
+Lauder, H., \& Mayhew, K. (2020). Higher education and the Labour Market: An Introduction. Oxford Review of Education, 46(1), 1--9.
+How does education affect labour market outcomes? - researchgate. (n.d.-b). \url{https://www.researchgate.net/profile/Alina-Ionescu-2/publication/263848494_How_does_education_affect_labour_market_outcomes/links/5f159a2992851c1eff2192f4/How-does-education-affect-labour-market-outcomes.pdf}
+Psacharopoulos, G.(1994). Returns to investment in education\,: A further update. World Bank.
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
+
+\end{document}
